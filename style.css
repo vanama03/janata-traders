@@ -12,6 +12,7 @@ header{
     text-align:center;
     padding:10px;
     width:100%;
+    box-sizing:border-box;
 }
 
 header img{
