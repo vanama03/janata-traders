@@ -68,7 +68,7 @@ button{
 
 button:hover{
     background:darkorange;
-}@media(max-width:800px){
+}@media(max-width:1000px){
 
    .container{
       grid-template-columns:1fr;
