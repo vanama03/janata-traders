@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+   <title>Janata Traders</title>
+
+   <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- LOGO -->
+
+<header>
+
+   <img src="images/logo.jpg">
+
+   
+
+   <h2>Edible Oils</h2>
+
+   <!-- CART -->
+
+   <div class="cart-icon">
+
+      🛒 Cart:
+      <span id="cart-count">0</span>
+
+   </div>
+
+</header>
+
+
+<!-- PRODUCTS -->
+
+<div class="container">
+
+
+   <!-- PRODUCT 0 -->
+
+   <div class="card">
+
+      <img src="images/freedom.jpg" width="200">
+
+      <h2>Freedom Oil</h2>
+
+      <p>Price: ₹180</p>
+
+      <div class="quantity">
+
+         <button onclick="decreaseQuantity(this)">-</button>
+
+         <span>0</span>
+
+         <button onclick="increaseQuantity(this)">+</button>
+
+      </div>
+
+      <button onclick="addToCart('Freedom Oil',180)">
+         Add to Cart
+      </button>
+
+      <button onclick="openPayment('Freedom Oil',180)">
+        Buy Now
+      </button>
+      
+
+   </div>
+
+
+
+   <!-- PRODUCT 2 -->
+
+   <div class="card">
+
+      <img src="images/vijaya.jpg" width="200">
+
+      <h2>Vijaya Oil</h2>
+
+      <p>Price: ₹220</p>
+
+      <div class="quantity">
+
+         <button onclick="decreaseQuantity(this)">-</button>
+
+         <span>0</span>
+
+         <button onclick="increaseQuantity(this)">+</button>
+
+      </div>
+
+      <button onclick="addToCart('Vijaya Oil',220)">
+         Add to Cart
+      </button>
+
+      <button onclick="openPayment('Vijaya Oil',180)">
+        Buy Now
+      </button>
+
+   </div>
+
+
+
+   <!-- PRODUCT 3 -->
+
+   <div class="card">
+
+      <img src="images/kadapa.jpg" width="200">
+
+      <h2>Kadapa Oil</h2>
+
+      <p>Price: ₹250</p>
+
+      <div class="quantity">
+
+         <button onclick="decreaseQuantity(this)">-</button>
+
+         <span>0</span>
+
+         <button onclick="increaseQuantity(this)">+</button>
+
+      </div>
+
+      <button onclick="addToCart('Kadapa Oil',250)">
+         Add to Cart
+      </button>
+
+      <button onclick="openPayment('kadapa Oil',180)">
+        Buy Now
+      </button>
+
+   </div>
+
+
+
+   <!-- PRODUCT 4 -->
+
+   <div class="card">
+
+      <img src="images/sunflower.jpg" width="200">
+
+      <h2>Gold Winner Oil</h2>
+
+      <p>Price: ₹230</p>
+
+      <div class="quantity">
+
+         <button onclick="decreaseQuantity(this)">-</button>
+
+         <span>0</span>
+
+         <button onclick="increaseQuantity(this)">+</button>
+
+      </div>
+
+      <button onclick="addToCart('Gold Winner Oil',230)">
+         Add to Cart
+      </button>
+
+      <button onclick="openPayment('Gold Winner Oil',180)">
+        Buy Now
+      </button>
+
+   </div>
+
+</div>
+
+
+<!-- HOME PAGE -->
+
+<div id="home-page">
+
+</div>
+
+
+<!-- LOCATION POPUP -->
+
+<div id="location-popup" class="popup">
+
+   <div class="popup-content">
+
+      <h2>📍 Our Store Location</h2>
+
+      <p>
+         Janata Traders<br>
+         Shop No: 356<br>
+         Vijayawada
+      </p>
+
+      <a href="https://maps.app.goo.gl/GxfvCufSwuJdHWd88"
+         target="_blank">
+
+         Open Google Maps
+
+      </a>
+
+      <br><br>
+
+      <button onclick="closeLocation()">
+
+         ❌ Close
+
+      </button>
+
+   </div>
+
+</div>
+
+<!-- HELP POPUP -->
+
+<div id="help-popup" class="popup">
+
+   <div class="popup-content">
+
+      <h2>📞 Help & Contact</h2>
+
+      <p>
+         WhatsApp Only
+      </p>
+
+      <a href="https://wa.me/918125625888">
+
+         +91 8125625888
+
+      </a>
+
+      <br><br>
+
+      <button onclick="closeHelp()">
+
+         ❌ Close
+
+      </button>
+
+   </div>
+
+</div>
+
+
+
+<!-- BOTTOM NAVIGATION -->
+
+<div class="bottom-nav">
+
+   <button onclick="showHome()">
+      🏠 Home
+   </button>
+
+   <button onclick="openCart()">
+      🛒 Cart
+   </button>
+
+   <button onclick="openLocation()">
+      📍 Location
+   </button>
+
+   <button onclick="openHelp()">
+      📞 Help
+   </button>
+
+</div>
+<!-- PAYMENT POPUP -->
+
+<div id="payment-popup" class="popup">
+
+   <div class="popup-content">
+
+      <h2>Scan & Pay</h2>
+
+      <img src="images/scanner.jpg" width="250">
+
+      <p>
+         Scan this QR using PhonePe
+      </p>
+
+      <button onclick="paymentSuccess()">
+
+         I Paid
+
+      </button>
+
+      <button onclick="closePopup()">
+
+         Close
+
+      </button>
+
+   </div>
+
+</div>
+<!-- CART POPUP -->
+
+<div id="cart-popup" class="popup">
+
+   <div class="popup-content">
+
+      <h2>🛒 Your Cart</h2>
+
+      <ul id="cart-items"></ul>
+
+      <br>
+
+      <button onclick="closeCart()">
+
+         ❌ Close
+
+      </button>
+
+   </div>
+
+</div>
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
